@@ -15,8 +15,8 @@ steps:
     versionSpec: '8'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: '/home/fmiguel/java8/java8.tar.gz'
-    jdkDestinationDirectory: 'java8'
+    jdkFile: '/home/fmiguel/java8/source/java8.tar.gz'
+    jdkDestinationDirectory: '/home/fmiguel/java8/installation'
     cleanDestinationDirectory: false
 - task: Maven@3
   name: 'testutilities'
