@@ -1,20 +1,16 @@
 package com.msready19.raist213;
 
-import org.junit.Test;
-
-
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 import java.util.List;
+import org.junit.Test;
 
-
+import static org.junit.Assert.*;
 
 public class SuperUtilitiesTest {
 
     @Test
-    public void doResverse(){
-        String source="abcde";
+    public void doResverse() {
+        String source = "abcde";
         String expected = "edcba";
         SuperUtilities r = new SuperUtilities();
         String actual = r.doReverse(source);
@@ -22,10 +18,9 @@ public class SuperUtilitiesTest {
     }
 
     @Test
-    public void convertList(){
+    public void convertList() {
         List<Integer> lotOfIntegers = Arrays.asList(1, 2, 3, 4, 5);
         List<String> actuals = SuperUtilities.convertList(lotOfIntegers, i -> i.toString());
-        assertArrayEquals(new String[]{"1", "2", "3", "4", "5"}, actuals.toArray());
+        assertArrayEquals(new String[] { "1", "2", "3", "4", "5" }, actuals.toArray());
     }
-
 }
