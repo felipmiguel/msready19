@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class SuperUtilitiesTest {
 
     @Test
-    public void doResverse() {
+    public void doReverse() {
         String source = "abcde";
         String expected = "edcba";
         SuperUtilities r = new SuperUtilities();
