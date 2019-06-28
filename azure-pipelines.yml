@@ -17,7 +17,7 @@ steps:
     jdkSourceOption: 'LocalDirectory'
     jdkFile: '/home/fmiguel/java8/source/java8.tar.gz'
     jdkDestinationDirectory: '/home/fmiguel/java8/installation'
-    cleanDestinationDirectory: false
+    cleanDestinationDirectory: true
 - task: Maven@3
   name: 'testutilities'
   displayName: 'Build superutilities'  
@@ -31,6 +31,9 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'test'
     codeCoverageToolOption: JaCoCo
+    checkStyleRunAnalysis: true
+    findBugsRunAnalysis: true
+    pmdRunAnalysis: true
 - task: Maven@3
   displayName: 'deploy to feed'
   # condition: 'testutilities'
