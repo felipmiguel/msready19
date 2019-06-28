@@ -34,7 +34,6 @@ steps:
     checkStyleRunAnalysis: true
     findBugsRunAnalysis: true
     pmdRunAnalysis: true
-    sonarQubeRunAnalysis: true
 - task: Maven@3
   displayName: 'deploy to feed'
   # condition: 'testutilities'
