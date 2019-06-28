@@ -1,6 +1,7 @@
 package com.msready19.raist213;
 
-import javax.ws.rs.GET;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -15,17 +16,17 @@ public class ToolsService {
         _tools = tools;
     }
 
-    @GET
+    @POST
     @Path("echo")
     @Produces("text/plain")
-    public String echo(@QueryParam("source") String source) {
+    public String echo(@FormParam("source") String source) {
         return source;
     }
 
-    @GET
+    @POST
     @Path("reverse")
     @Produces("text/plain")
-    public String reverse(@QueryParam("source") String source) {
+    public String reverse(@FormParam("source") String source) {
         // return reverser.get().doReverse(source);
         return _tools.doReverse(source);
     }
