@@ -4,15 +4,14 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 
 @Path("/tools")
 public class ToolsService {
 
-    private Reverser _tools;
+    private SuperUtilities _tools;
 
     
-    public ToolsService(Reverser tools) {
+    public ToolsService(SuperUtilities tools) {
         _tools = tools;
     }
 
@@ -27,7 +26,6 @@ public class ToolsService {
     @Path("reverse")
     @Produces("text/plain")
     public String reverse(@FormParam("source") String source) {
-        // return reverser.get().doReverse(source);
         return _tools.doReverse(source);
     }
 
