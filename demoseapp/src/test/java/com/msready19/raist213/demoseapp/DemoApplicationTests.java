@@ -33,12 +33,11 @@ public class DemoApplicationTests {
 	public void testEcho() {
 		String source = "Hello from ready!";
 		HttpEntity<String> entity = new HttpEntity<String>(source);
-		ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("/"), HttpMethod.POST, entity,
+		ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("/echo"), HttpMethod.POST, entity,
 				String.class);
 
-		String expected = source;
+		String expected = "Spring echo: " + source;
 
 		assertEquals(expected, response.getBody());
 	}
-
 }
