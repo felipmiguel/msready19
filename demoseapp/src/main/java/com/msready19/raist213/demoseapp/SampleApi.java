@@ -16,6 +16,6 @@ public class SampleApi {
 
     @RequestMapping(path = "/reverse", method=RequestMethod.GET)
     String reverse(@RequestParam String source) {
-        return source;
+        return "not yet reversing... " + source;
     }
 }
