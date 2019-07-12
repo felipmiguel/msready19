@@ -14,7 +14,6 @@ public class DemoApp extends Application {
     public DemoApp() {
         SuperUtilities reverser = new SuperUtilities();
         singletons.add(new ToolsService(reverser));        
-        singletons.add(reverser);        
     }
 
     @Override

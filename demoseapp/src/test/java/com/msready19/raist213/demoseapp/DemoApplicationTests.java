@@ -40,4 +40,14 @@ public class DemoApplicationTests {
 
 		assertEquals(expected, response.getBody());
 	}
+
+	@Test
+	public void testHello() {
+		ResponseEntity<String> response = restTemplate.exchange(createURLWithPort("/"), HttpMethod.GET, null,
+				String.class);
+
+		String expected = "Hello Ready!";
+
+		assertEquals(expected, response.getBody());
+	}
 }

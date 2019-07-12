@@ -12,4 +12,9 @@ public class SampleApi {
     String echo(@RequestBody String source) {
         return "Spring echo: " + source;
     }
+
+    @RequestMapping(path= "/", method = RequestMethod.GET)
+    String hello(){
+        return "Hello Ready!";
+    }
 }
